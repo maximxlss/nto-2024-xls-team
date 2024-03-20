@@ -57,3 +57,5 @@ con.send(payload + b"\n")
 
 con.interactive()
 ```
+
+Флаг: nto{easy_formt_string}
