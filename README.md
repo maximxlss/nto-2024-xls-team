@@ -23,7 +23,7 @@
 ## web3
 
 Пробуем разные способы обойти прокси, получаем: "http://192.168.12.11:8001//flag?name=a". Пробуем разные SSTI пейлоады, узнаем, что это jinja, собираем пейлоад: "http://192.168.12.11:8001//flag?name={{request.__init__.__globals__.__builtins__[%22open%22](%22./flag.txt%22).read()}}"
-Флаг: nto{Ht1P_sM088Lin6_88Ti} 
+`flag`: nto{Ht1P_sM088Lin6_88Ti} 
 
 
 ## crypto2
@@ -58,4 +58,4 @@ con.send(payload + b"\n")
 con.interactive()
 ```
 
-Флаг: nto{easy_formt_string}
+`flag`: nto{easy_formt_string}
