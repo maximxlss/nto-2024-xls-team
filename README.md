@@ -26,4 +26,4 @@
 
 Полноценный скрипт решения (использует sagemath и PyCryptodome) [прилагается](./crypto2.py)
 
-Флаг: nto{50mb0dy_45k3d_m3_f0r_d1scr3t3_l0g_2}
+`flag`: nto{50mb0dy_45k3d_m3_f0r_d1scr3t3_l0g_2}
