@@ -19,4 +19,9 @@
 
 ## [**Umor1st**](https://github.com/Umor1st/)
 
+## [**Maximxls**](https://github.com/maximxlss/)
+
+## [**Wenerd**](https://github.com/wenerd569)
+
+## [**T1m013y**](https://github.com/t1m013y)
 
