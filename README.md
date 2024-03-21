@@ -72,7 +72,7 @@ con.interactive()
 
 `flag`: nto{easy_formt_string}
 
-## Pwn 2
+## pwn 2
 
 Дизассемблируем файл с помощью Ghidra. Программа читает 500 байт на стек. Можно переписать адрес возврата.  
 ![image](https://github.com/maximxlss/nto-2024-xls-team/assets/91249047/ba6292fd-b10e-434c-aeba-5fe93ccf37b3)  
