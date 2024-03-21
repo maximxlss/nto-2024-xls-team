@@ -109,7 +109,7 @@ jmp rax
 
 Получаем шелл и читаем `/flag`.
 
-`flag`: `nto{sropsropsroplazy}`
+`flag`: nto{sropsropsroplazy}
 
 ## pwn3
 
