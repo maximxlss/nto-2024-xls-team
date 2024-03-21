@@ -1,4 +1,4 @@
-# NTO-2024-xls-team
+# STAGE 1
 
 # Task solves
 
