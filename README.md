@@ -12,4 +12,11 @@
 
 ### [STAGE2](./STAGE2.md)
 
+</br>
+
+# Team members:
+
+
+## [**Umor1st**](https://github.com/Umor1st/)
+
 
